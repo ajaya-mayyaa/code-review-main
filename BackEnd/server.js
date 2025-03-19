@@ -6,7 +6,7 @@ require('dotenv').config()
 const app = require('./src/app')
 
 const path = require("path");
-const _dirname = __dirname; // ✅ Corrected
+const _dirname = path.resolve(__dirname, "..");
 
 app.use(express.json());
 app.use(cors());
